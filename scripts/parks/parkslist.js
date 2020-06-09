@@ -2,8 +2,22 @@
 Responsible for generating a list of park HTML
 representations, and putting in the browser
 */
+let userChoice = ""
+const stateDropdown = document.querySelector(".stateChoice")
 
+const clearParkList = () => contentTarget.innerHTML = ""
+const contentTarget = document.querySelector(".national-park-preview")
 
+stateDropdown.addEventListener("change", clickEvent => {
+//     // Get the value of the option chosen by the user
+    userChoice = clickEvent.target.value
+    clearParkList()
+    getParkData().then(
+        () => {
+            parkList()
+        }
+          )
+    })
 
 const parkList = () => {
     // Iterate the collection of park objects
