@@ -12,3 +12,6 @@
 //         attractionArticleElement.innerHTML += attractionHTML
 //     }
 // }
+
+// const userEaterChoice = document.addEventListener("change", f =>{
+//     f.target.value

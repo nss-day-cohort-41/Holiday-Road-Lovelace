@@ -1,41 +1,54 @@
+let userEaterChoice = ""
 const eateryTypeDropdown = document.getElementById("eatery-dropdown")
+const eateryContentTarget = document.querySelector(".eatery-preview")
 
-const userEaterChoice = document.addEventListener("change", f =>{
-    return f.target.value
+const clearUserEaterChoice = () => eateryContentTarget.innerHTML = ""
+
+eateryTypeDropdown.addEventListener("change", eateryChangeEvent => {
+       userEaterChoice = eateryChangeEvent.target.value
+    
 })
 
-let eateryDropdown = $('#eatery-dropdown');
+      
 
-eateryDropdown.empty();
+getEateryData().then(
+  () => {
+    eateryDropdownList()
+  }
+)
 
-eateryDropdown.append(`<option selected= "true" disabled>Choose Eatery</option>`);
-eateryDropdown.prop('selectedIndex', 0);
+// bring in eatery API and leave initial dropdown empty
 
-const eateryUrl = 'http://holidayroad.nss.team/eateries';
+const eateryDropdownConverter = (eateryObject) => {
+ 
+  const eateryDropdownHTMLRepresentation = `<option value="${eateryObject.businessName}">${eateryObject.businessName}</option>`
 
-// Populate dropdown with list of eateries
-$.getJSON(eateryUrl, function (data) {
-    $.each(data, function (key, eateryObject) {
-      eateryDropdown.append($('<option></option>').attr('value', eateryObject.businessName).text(eateryObject.businessName));
-    })
-  });
+  return eateryDropdownHTMLRepresentation
+
+}
+
 
 
 
 // return selector from dropdown to fill in preview return function
-const eateryPreviewCard = (eateryChoiceObject) => {
-    const eateryHTMLRepresentation = `
+getEateryData().then((response) =>{
+  clearUserEaterChoice()
+  eateryPreviewList(response)
+  console.log(response)
+}
+)
+
+const eateryPreviewCardConverter = (eateryObject) => {
+    console.log(eateryObject)
+  const eateryHTMLRepresentation = `
     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-  <div class="card-header">${eateryChoiceObject.city}, ${eateryChoiceObject.state}</div>
+  <div class="card-header">${eateryObject.city}, ${eateryObject.state}</div>
   <div class="card-body">
-    <h5 class="card-title">${eateryChoiceObject.businessName}</h5>
-    <p class="card-text">${eateryChoiceObject.description}</p>
-    <p class="card-text">Restroom: ${eateryChoiceObject.ameneties.restrooms}</p>
+    <h5 class="card-title">${eateryObject.businessName}</h5>
+    <p class="card-text">${eateryObject.description}</p>
   </div>
 </div>`
  
+
     return eateryHTMLRepresentation 
-}
-if (userEaterChoice === "any") {
-    return eateryPreviewCard ()
 }

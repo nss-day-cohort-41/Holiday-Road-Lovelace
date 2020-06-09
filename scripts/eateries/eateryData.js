@@ -9,16 +9,11 @@ const getEateryData = () => {
     .then(
         (arrayOfEatery) => {
             eateryCollection = arrayOfEatery
+            return arrayOfEatery
         }
     )
     
 }
 
 
-getEateryData()
 
-getEateryData().then(
-    () => {
-        eateryPreviewList()
-    }
-)
