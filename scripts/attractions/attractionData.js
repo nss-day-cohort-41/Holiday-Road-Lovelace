@@ -13,10 +13,8 @@ const getAttractionData = () => {
     )
     
 }
-getAttractionData().then(
-    () => {
-        attractionList()
-    }
-)
+getAttractionData()
+
+
 
 

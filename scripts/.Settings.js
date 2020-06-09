@@ -4,3 +4,4 @@ export default {
 	weatherKey: "47e208e9402a2f88a5e94911b23e141f"
 }
 
+

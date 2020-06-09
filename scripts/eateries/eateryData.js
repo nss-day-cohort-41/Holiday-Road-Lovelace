@@ -15,8 +15,10 @@ const getEateryData = () => {
 }
 
 
+getEateryData()
+
 getEateryData().then(
     () => {
-        eateryList()
+        eateryPreviewList()
     }
 )
