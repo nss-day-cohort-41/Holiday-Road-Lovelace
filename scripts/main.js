@@ -1,5 +1,0 @@
-// getParkData().then(
-//     () => {
-//         parkList()
-//     }
-// )
