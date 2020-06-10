@@ -79,3 +79,10 @@ const showParkChoice = () => {
     // }
 }
 
+// const natParkButtonListener = document.querySelector(".natPark__details__button")
+
+
+// natParkButtonListener.addEventListener("click", clickEvent => {
+//         window.alert("details")
+//     }
+// )

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .park__Photo {
     width: 100%;
 }
@@ -20,6 +21,41 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
+=======
+@import "startpage.css";
+
+header {
+    background-image: url(../images/Banner-landscape.jpeg);
+    background-size: 100%;
+    text-align: center;
+    justify-content: center;
+    color: cornsilk;
+    padding: 1vw;
+    font-size: 3vw;
+
+}
+
+main {
+    background-image: url(../images/Main-landscape.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.banner {
+    width: 25%;
+    font-family: 'Limelight', cursive;
+    font-size: 1.2vw;
+    text-align: center;
+    padding: .5%;
+    background-color:cornsilk;
+    border-radius: 5%;
+    margin: 2%;
+ 
+}
+
+>>>>>>> master
 .hidden {
     display: none;
 }
