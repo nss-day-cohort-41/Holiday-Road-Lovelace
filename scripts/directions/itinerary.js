@@ -7,7 +7,7 @@ let intineraryCard = (obj)=>{
     </div>`
 }
 const itineraryAppender = (object) => {
-    
+    document.getElementById('saved-itinerary').innerHTML = "";
    for(let i = 0; i < object.instructions.length;i++){
        let direction = object.instructions[i]
        let directionCard = intineraryCard(direction)

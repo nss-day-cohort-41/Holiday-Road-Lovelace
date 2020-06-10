@@ -1,5 +1,7 @@
 
 function directions(park){
+
+    
     let lat = parseFloat(park.latitude).toFixed(6);
     let long = parseFloat(park.longitude).toFixed(6);
     console.log(park, "direction",lat,long)
@@ -42,6 +44,7 @@ style: {color: "#00cc33", "weight": 5, "opacity": 0.6}
 };
     
 })
+
 }
 //    <!-- <script>
 // var map = L.map('map', {
