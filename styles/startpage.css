@@ -8,12 +8,10 @@
 }
 
 .dropdown {
-    border: 1px dotted;
     font-size: 1.4vw;
 }
 
 .dropdown-box {
-    border: 1px dotted;
     width: 30%;
     display: flex;
     flex-direction: column;

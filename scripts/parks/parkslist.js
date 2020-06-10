@@ -54,13 +54,22 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
         
         if ( userNationalParkChoice === parkToDisplay.parkCode ) {
             targetNationalPark = parkToDisplay
+<<<<<<< HEAD
             
+=======
+            directions(parkToDisplay);
+>>>>>>> master
                         showParkChoice()
             if(document.getElementById("map-container").classList.contains("hidden")){
                 document.getElementById('map-container').classList.toggle('hidden');
                 }
+<<<<<<< HEAD
                
             directions(parkToDisplay);
+=======
+          
+            
+>>>>>>> master
             showParkChoice()
             weather(targetNationalPark)
             
@@ -81,6 +90,26 @@ const showParkChoice = () => {
 
         // Put the park HTML representation inside the <article> element
         parkArticleElement.innerHTML = parkHTML
+<<<<<<< HEAD
     // }
+=======
+    let natParkButtonListener = document.querySelector(".natPark__details__button")
+
+
+    natParkButtonListener.addEventListener("click", clickEvent => {
+                showParkDetails()
+        }
+    )
+}
+
+
+// This is the park details page generator
+
+const showParkDetails = () => {
+    let windowDetails = `${targetNationalPark.fullName}
+     ${targetNationalPark.description}`
+
+    window.alert(windowDetails)
+>>>>>>> master
 }
 

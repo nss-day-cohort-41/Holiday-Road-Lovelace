@@ -14,3 +14,9 @@ const getParkData = () => {
                 )
         }
         
+
+        /*
+Responsible for generating a list of park HTML
+representations, and putting in the browser
+*/
+
