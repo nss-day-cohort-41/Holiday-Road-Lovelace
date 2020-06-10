@@ -46,12 +46,18 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
 //     // Get the value of the option chosen by the user
     userNationalParkChoice = clickEvent.target.value
     clearParkPreview()
+<<<<<<< HEAD
    
+=======
+    clearWeatherList()
+
+>>>>>>> master
         // const parkToPreview = nationalParkCollection.find(park => park.parkCode === "userNationalParkChoice")
        for (const parkToDisplay of nationalParkCollection.data)
         
         if ( userNationalParkChoice === parkToDisplay.parkCode ) {
             targetNationalPark = parkToDisplay
+<<<<<<< HEAD
             directions(parkToDisplay);
                         showParkChoice()
             if(document.getElementById("map-container").classList.contains("hidden")){
@@ -59,6 +65,10 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
                 }
           
             
+=======
+            showParkChoice()
+            weather(targetNationalPark)
+>>>>>>> master
             
         }
             
