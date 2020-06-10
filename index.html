@@ -6,24 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holiday Run</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main>
         <header class="header">
+            <h1>Wish You Could Get Away?</h1>
             <nav class="navbar">
                 <ul>
                     <li></li>
                     <li></li>
                     <li></li>
                 </ul>
-            </nav>
-            <div class="banner">
-                <h1>Start Your Adventure Here</h1>
-            </div>
+            </nav>       
         </header>
-        <section class="userParameters">
-            <select class="stateChoice">
+        <div class="banner">
+            <h2>Start Your Adventure Here</h2>
+        
+            <section class="userParameters">
+                <select class="stateChoice">
                     <option>Choose a state</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -76,10 +78,11 @@
                     <option value="WV">West Virginia</option>
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>	             
-            </select>
+                </select>
 
 
-        </section>
+            </section>
+        </div>
         <section class="dropdown-and-preview">
             <div class="dropdown-box">
                 <select class="national__Park__Dropdown dropdown" id="national-park-dropdown">
@@ -91,10 +94,11 @@
                 <select class="dropdown" id="eatery-dropdown">
                     <!-- option  -->
                 </select>
+                
             </div>
             <div class="itinerary-preview" id="itinerary-preview">
                 <div class="national-park-preview">
-
+                    <button type="button" class="natPark__details__button hidden">Details</button> 
                 </div>
                 <div class="bizarre-preview">
 
@@ -104,6 +108,9 @@
                 </div>
             </div>
         </section>
+        <div class="save__button">
+            <button type="button" disabled>Save my trip</button>
+        </div>
         <section class="weather-and-map-itinerary">
             <div class="weather-map-container">
                 <div class="weather-container">
