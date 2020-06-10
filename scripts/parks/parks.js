@@ -15,9 +15,9 @@ const parkPreviewConverter = (parkObject) => {
     return parkHTMLRepresentation
 }
 
-const parkDropdownConverter = () => {
+const parkDropdownConverter = (parkObject) => {
     const parkDropdownHTML = `
-    <option value="${nationalParkCollection.data.parkCode}">${nationalParkCollection.data.fullName}</option>
+    <option value="${parkObject.parkCode}">${parkObject.fullName}</option>
     `
     return parkDropdownHTML
 }
