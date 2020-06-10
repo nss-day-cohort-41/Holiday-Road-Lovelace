@@ -8,7 +8,7 @@ representations, and putting in the browser
 
 let userStateChoice = ""
 
-const clearParkPulldown = () => nationalStateTarget.innerHTML = ""
+const clearParkPulldown = () => nationalStateTarget.innerHTML = "<option>Choose Your Park</option>"
 const nationalStateTarget = document.querySelector(".national__Park__Dropdown")
 
 const stateDropdown = document.querySelector(".stateChoice")
