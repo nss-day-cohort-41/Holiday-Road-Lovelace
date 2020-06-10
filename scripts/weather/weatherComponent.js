@@ -7,7 +7,8 @@ const fiveDayForecast = (weatherApi) => {
 forecast = []
 
   for (let i = 0; i < weatherApi.list.length; i+= 8) {
-    const desc = `<div class="weather-card"><div class="weather-date">Date: ${weatherApi.list[i].dt_txt}</div><div class=""weather-icon>Icon: ${weatherApi.list[i].weather[0].icon}</div><div class="weather-description">Description: ${weatherApi.list[i].weather[0].description}</div><div class="weather-max">Max: ${weatherApi.list[i].main.temp_max}</div><div class="weather-min">Min: ${weatherApi.list[i].main.temp_min}</div></div>`
+
+    const desc = `<div class="weather-card"><div class="weather-date">${weatherApi.list[i].dt_txt}</div><div class=""weather-icon><img src="http://openweathermap.org/img/wn/${weatherApi.list[i].weather[0].icon}@2x.png"></div><div class="weather-description">${weatherApi.list[i].weather[0].description}</div><div class="weather-max">Max: ${weatherApi.list[i].main.temp_max}</div><div class="weather-min">Min: ${weatherApi.list[i].main.temp_min}</div></div>`
 
     forecast.push(desc)
   }
