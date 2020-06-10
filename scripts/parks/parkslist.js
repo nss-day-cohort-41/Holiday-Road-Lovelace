@@ -72,13 +72,22 @@ const showParkChoice = () => {
 
         // Put the park HTML representation inside the <article> element
         parkArticleElement.innerHTML += parkHTML
-    // }
+    let natParkButtonListener = document.querySelector(".natPark__details__button")
+
+
+    natParkButtonListener.addEventListener("click", clickEvent => {
+                showParkDetails()
+        }
+    )
 }
 
-// const natParkButtonListener = document.querySelector(".natPark__details__button")
 
+// This is the park details page generator
 
-// natParkButtonListener.addEventListener("click", clickEvent => {
-//         window.alert("details")
-//     }
-// )
+const showParkDetails = () => {
+    let windowDetails = `${targetNationalPark.fullName}
+     ${targetNationalPark.description}`
+
+    window.alert(windowDetails)
+}
+
