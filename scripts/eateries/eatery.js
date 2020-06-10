@@ -1,14 +1,19 @@
 
-const eateryTypeDropdown = document.getElementById("eatery-dropdown")
-const eateryContentTarget = document.querySelector(".eatery-preview")
-
-const clearUserEaterChoice = () => eateryContentTarget.innerHTML = ""
-
-eateryTypeDropdown.addEventListener("change", eateryChangeEvent => {
-     const userEaterChoice = eateryChangeEvent.target.value})
-
-      if (userEaterChoice == true) {}
-
-
-
-// convert object to html info
+const eateryDropdownConverter = (eateryObject) => {
+      const eateryDropdownHTML = `
+      <option value=${eateryObject.id}>${eateryObject.businessName}</option>
+      `
+      return eateryDropdownHTML
+    }
+    
+    
+    const eateryPreviewConverter = (eateryObject) => {
+    
+      const eateryHTMLRepresentation = `
+          <article class="eateryCard">
+                  <section class="eateryName"><div>${eateryObject.businessName}</div>
+                  </section> 
+          </article>`
+    
+      return eateryHTMLRepresentation
+    }
