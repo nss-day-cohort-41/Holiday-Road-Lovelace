@@ -11,9 +11,11 @@ const getAttractionData = () => {
             attractionCollection = arrayOfAttraction
         }
     )
-    
 }
-getAttractionData()
+
+ 
+
+
 
 
 

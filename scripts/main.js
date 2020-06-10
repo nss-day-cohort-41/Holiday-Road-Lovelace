@@ -3,3 +3,13 @@
 //         parkList()
 //     }
 // )
+
+
+getAttractionData().then(
+ () => {
+    attractionDropdownList(attractionCollection)
+   
+ }  
+)
+
+
