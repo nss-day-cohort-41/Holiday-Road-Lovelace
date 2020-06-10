@@ -3,4 +3,22 @@
 .park__Photo {
     width: 100%;
 }
-
+.itinerary {
+    border:black solid 1px;
+    box-shadow: black 0px 0px 4px;
+    display: flex;
+    height: auto;
+    width: auto;
+}
+.saved-itinerary {
+    overflow:scroll;
+    height:300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.map-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
