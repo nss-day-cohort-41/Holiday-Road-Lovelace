@@ -24,6 +24,7 @@
         </header>
         <section class="userParameters">
             <select class="stateChoice">
+                    <option>Choose a state</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -81,7 +82,7 @@
         </section>
         <section class="dropdown-and-preview">
             <div class="dropdown-box">
-                <select class="dropdown" id="national-park-dropdown">
+                <select class="national__Park__Dropdown dropdown" id="national-park-dropdown">
                    
                 </select>
                 <select class="dropdown" id="bizarre-dropdown">
@@ -119,10 +120,11 @@
 
     </main>
 
+    <!-- National Parks components -->
+    <script src="scripts/Settings.js"></script>
     <script src="scripts/parks/ParkProvider.js"></script>
     <script src="scripts/parks/parkslist.js"></script>
-    <script src="scripts/parks/parks.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/parks/parks.js"></script> 
 
     <!-- Weather Component -->
     <script src="scripts/weather/WeatherProvider.js"></script>
