@@ -12,3 +12,4 @@ const weatherApi = {
       .then(arrayOfData => {this.weatherData = arrayOfData})
   }
 }
+
