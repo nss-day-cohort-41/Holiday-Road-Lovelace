@@ -80,7 +80,23 @@ const showParkChoice = () => {
         const parkArticleElement = document.querySelector(".national-park-preview")
 
         // Put the park HTML representation inside the <article> element
-        parkArticleElement.innerHTML += parkHTML
-    // }
+        parkArticleElement.innerHTML = parkHTML
+    let natParkButtonListener = document.querySelector(".natPark__details__button")
+
+
+    natParkButtonListener.addEventListener("click", clickEvent => {
+                showParkDetails()
+        }
+    )
+}
+
+
+// This is the park details page generator
+
+const showParkDetails = () => {
+    let windowDetails = `${targetNationalPark.fullName}
+     ${targetNationalPark.description}`
+
+    window.alert(windowDetails)
 }
 
