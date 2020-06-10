@@ -1,4 +1,33 @@
-@import "startpage.css";
+@import "/styles/weather/weather.css";
+
+@import "/styles/startpage.css";
+
+.itinerary {
+    border:black solid 1px;
+    box-shadow: black 0px 0px 4px;
+    background-color: blanchedalmond;
+    display: flex;
+    height: auto;
+    width: auto;
+}
+.saved-itinerary {
+    overflow:scroll;
+    height:300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+}
+.map-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    border: black solid 1px;
+
+}
+
 
 header {
     background-image: url(../images/Banner-landscape.jpeg);
