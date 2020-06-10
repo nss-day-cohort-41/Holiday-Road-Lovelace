@@ -1,5 +1,36 @@
+<<<<<<< HEAD
+.park__Photo {
+    width: 100%;
+}
+.itinerary {
+    border:black solid 1px;
+    box-shadow: black 0px 0px 4px;
+    background-color: blanchedalmond;
+    display: flex;
+    height: auto;
+    width: auto;
+}
+.saved-itinerary {
+    overflow:scroll;
+    height:300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+}
+.map-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    border: black solid 1px;
+
+}
+=======
 @import "/styles/weather/weather.css";
 
+>>>>>>> master
 @import "startpage.css";
 
 header {
