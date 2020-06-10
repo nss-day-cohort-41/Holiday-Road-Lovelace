@@ -2,7 +2,8 @@
 Responsible for generating a list of park HTML
 representations, and putting in the browser
 */
-
+document.getElementById('map').classList.toggle('hidden');
+document.getElementById('saved-itinerary').classList.toggle('hidden');
 
 // This places parks into the dropdown menu filtered from the selected state
 
@@ -47,12 +48,15 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
 //     // Get the value of the option chosen by the user
     userNationalParkChoice = clickEvent.target.value
     clearParkPreview()
-
+   
         // const parkToPreview = nationalParkCollection.find(park => park.parkCode === "userNationalParkChoice")
        for (const parkToDisplay of nationalParkCollection.data)
         
         if ( userNationalParkChoice === parkToDisplay.parkCode ) {
             targetNationalPark = parkToDisplay
+            document.getElementById('map').classList.toggle('hidden');
+            document.getElementById('saved-itinerary').classList.toggle('hidden');
+            directions(parkToDisplay);
             showParkChoice()
             
         }

@@ -1,6 +1,10 @@
 
+function directions(park){
+    let lat = parseFloat(park.latitude).toFixed(6);
+    let long = parseFloat(park.longitude).toFixed(6);
+    console.log(park, "direction",lat,long)
 getParkCorrdinates().then(e=>{
-  console.log(e, "returned response")
+   
 var osmUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
 osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 osm = L.tileLayer(osmUrl, {
@@ -12,7 +16,7 @@ var map = L.map('map').setView([36.174465, -86.767960], 12).addLayer(osm);
 
 var ghRouting = new GraphHopper.Routing({key: "d519e0c5-db39-44c5-945c-4a8a4e6009cc", host: "https://graphhopper.com/api/1/", vehicle: "car", elevation: false});
 ghRouting.addPoint(new GHInput(36.174465, -86.767960));
-ghRouting.addPoint(new GHInput(parkCoordinates[1], parkCoordinates[0]));
+ghRouting.addPoint(new GHInput(lat, long));
 
 ghRouting.doRequest()
    .then(function (json) {
@@ -38,7 +42,7 @@ style: {color: "#00cc33", "weight": 5, "opacity": 0.6}
 };
     
 })
-
+}
 //    <!-- <script>
 // var map = L.map('map', {
 //     center: [51.505, -0.09],
