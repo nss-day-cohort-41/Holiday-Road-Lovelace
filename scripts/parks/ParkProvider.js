@@ -12,6 +12,6 @@ const getParkData = () => {
                         nationalParkCollection = arrayOfParks
                     }
                 )
-            return nationalParkCollection
+            // return nationalParkCollection
         }
         

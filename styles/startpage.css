@@ -1,0 +1,101 @@
+.dropdown-and-preview {
+    background-color: rgba(255, 248, 220, 0.781);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 30vw;
+ 
+}
+
+.dropdown {
+    border: 1px dotted;
+    font-size: 1.4vw;
+}
+
+.dropdown-box {
+    border: 1px dotted;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.itinerary-preview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.national-park-preview {
+    font-family: 'Limelight', cursive;
+    width: 50%;
+    font-size: 2.2vw;
+    text-align: center;
+    padding: .5%;
+    background-color:cornsilk;
+    border-radius: 5%;
+    margin: 2%;
+    padding: 3%;
+    box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2), 3px 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.bizarre-preview {
+    width: 25%;
+    font-family: 'Limelight', cursive;
+    font-size: 2.2vw;
+    text-align: center;
+    padding: .5%;
+    background-color:cornsilk;
+    border-radius: 5%;
+    margin: 2%;
+    padding: 3%;
+    box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2), 3px 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.eatery-preview {
+    width: 25%;
+    font-family: 'Limelight', cursive;
+    font-size: 2.2vw;
+    text-align: center;
+    padding: .5%;
+    background-color:cornsilk;
+    border-radius: 5%;
+    margin: 2%;
+    padding: 3%;
+    box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2), 3px 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.park__Photo {
+    max-width: 100%;
+    border-radius: 5%;
+}
+.userParameters {
+    width: 25%;
+    font-family: 'Limelight', cursive;
+    font-size: 2.2vw;
+    text-align: center;
+    padding: .5%;
+    background-color:cornsilk;
+    border-radius: 5%;
+    margin: 2%;
+    padding: 3%;
+}
+
+.stateChoice {
+    font-family: 'Limelight', cursive;
+    font-size: 1.7vw;
+    text-align: center;
+    padding: .5%;
+    background-color:cornsilk;
+    border-radius: 5%;
+}
+
+.save__button {
+    font-family: 'Limelight', cursive;
+    font-size: 1.7vw;
+    text-align: center;
+    padding: .5%;
+    background-color:cornsilk;
+
+
+}

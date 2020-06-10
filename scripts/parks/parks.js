@@ -8,7 +8,7 @@ const parkPreviewConverter = (parkObject) => {
         <article class="national-park-card">
                 <img class="park__Photo" src="${parkObject.images[0].url}"
                     alt="${parkObject.images[0].altText}"/>
-                <section class="park"><strong>${parkObject.fullName}</strong><br>"${parkObject.description}<br>Coordinates ${parkObject.latLong}”
+                <section class="park"><strong>${parkObject.fullName}</strong>
                 </section> 
         </article>`
 
@@ -21,3 +21,6 @@ const parkDropdownConverter = (parkObject) => {
     `
     return parkDropdownHTML
 }
+
+
+/* <br>"${parkObject.description} */
