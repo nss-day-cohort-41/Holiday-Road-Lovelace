@@ -1,0 +1,10 @@
+.weather-container {
+  display: flex;
+}
+
+.weather-card {
+  margin: 1em;
+  border: 1px solid white;
+  background-color: cornsilk;
+
+}
