@@ -3,7 +3,6 @@ Responsible for generating a list of park HTML
 representations, and putting in the browser
 */
 
-
 // This places parks into the dropdown menu filtered from the selected state
 
 let userStateChoice = ""
@@ -47,6 +46,7 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
 //     // Get the value of the option chosen by the user
     userNationalParkChoice = clickEvent.target.value
     clearParkPreview()
+   
     clearWeatherList()
 
         // const parkToPreview = nationalParkCollection.find(park => park.parkCode === "userNationalParkChoice")
@@ -54,6 +54,13 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
         
         if ( userNationalParkChoice === parkToDisplay.parkCode ) {
             targetNationalPark = parkToDisplay
+            directions(parkToDisplay);
+                        showParkChoice()
+            if(document.getElementById("map-container").classList.contains("hidden")){
+                document.getElementById('map-container').classList.toggle('hidden');
+                }
+          
+            
             showParkChoice()
             weather(targetNationalPark)
             
@@ -77,10 +84,3 @@ const showParkChoice = () => {
     // }
 }
 
-// const natParkButtonListener = document.querySelector(".natPark__details__button")
-
-
-// natParkButtonListener.addEventListener("click", clickEvent => {
-//         window.alert("details")
-//     }
-// )
