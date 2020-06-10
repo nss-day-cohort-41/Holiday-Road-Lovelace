@@ -47,6 +47,7 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
 //     // Get the value of the option chosen by the user
     userNationalParkChoice = clickEvent.target.value
     clearParkPreview()
+    clearWeatherList()
 
         // const parkToPreview = nationalParkCollection.find(park => park.parkCode === "userNationalParkChoice")
        for (const parkToDisplay of nationalParkCollection.data)
@@ -54,6 +55,7 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
         if ( userNationalParkChoice === parkToDisplay.parkCode ) {
             targetNationalPark = parkToDisplay
             showParkChoice()
+            weather(targetNationalPark)
             
         }
             
