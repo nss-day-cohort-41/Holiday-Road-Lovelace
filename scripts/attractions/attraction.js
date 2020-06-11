@@ -2,7 +2,7 @@
 const attractionDropdownConverter = (attractionObject) => {
   const attractionDropdownHTML = `
   <option value=${attractionObject.id}>${attractionObject.name}</option>
-        </article>
+        
   `
   return attractionDropdownHTML
 }

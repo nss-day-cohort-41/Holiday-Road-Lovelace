@@ -3,7 +3,7 @@ const eateryDropdownConverter = (eateryObject) => {
       const eateryDropdownHTML = `
       <option value=${eateryObject.id}>${eateryObject.businessName}</option>
       
-        </article>
+        
       `
       return eateryDropdownHTML
     }
