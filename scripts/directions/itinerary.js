@@ -1,16 +1,21 @@
-let intineraryCard = (obj)=>{
+let intineraryCard = (obj, time, distance)=>{
     return `<div class="itinerary">
-    <p>Distance:${obj.distance}</p>
+    <p>Distance:${distance}</p>
     <h1>${obj.text}</h1>
-    <p>${obj.time}</p>
+    <p>${time}</p>
 
     </div>`
 }
+let savedDirectionArray = []
 const itineraryAppender = (object) => {
-    
+    document.getElementById('saved-itinerary').innerHTML = "";
    for(let i = 0; i < object.instructions.length;i++){
+       let current = object.instructions[i]
+    let time = msToTime(current.time)
+    let distance = getMiles(current.distance)
        let direction = object.instructions[i]
-       let directionCard = intineraryCard(direction)
+       let directionCard = intineraryCard(direction, time, distance)
+       savedDirectionArray.push({direction,time,distance});
        document.getElementById('saved-itinerary').innerHTML+=directionCard;
    }
 }

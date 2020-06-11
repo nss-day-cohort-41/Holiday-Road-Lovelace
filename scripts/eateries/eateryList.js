@@ -1,6 +1,4 @@
 const eateryDropdownList = (eateryCollection) => {
-
-
     // Find the <article> element in index.html
     const eateryDropdownArticleElement = document.querySelector("#eatery-dropdown")
     const emptyEateryDropdownStart = "<option>Choose Eatery</option>"
@@ -13,9 +11,6 @@ const eateryDropdownList = (eateryCollection) => {
         // Put the taco HTML representation inside the <article> element
         eateryDropdownArticleElement.innerHTML += eateryDropdownHTML
     }
-
-
-
 }
 
 let targetEatery
