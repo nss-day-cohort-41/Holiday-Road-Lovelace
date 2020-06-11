@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-.park__Photo {
-    width: 100%;
-}
-=======
 @import "/styles/weather/weather.css";
 
 @import "/styles/startpage.css";
 
->>>>>>> master
 .itinerary {
     border:black solid 1px;
     box-shadow: black 0px 0px 4px;
@@ -33,13 +27,6 @@
     border: black solid 1px;
 
 }
-<<<<<<< HEAD
-@import "/styles/weather/weather.css";
-
-@import "startpage.css";
-=======
-
->>>>>>> master
 
 header {
     background-image: url(../images/Banner-landscape.jpeg);
