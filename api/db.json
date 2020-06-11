@@ -1,3 +1,184 @@
 {
-	"itineraries": []
+  "itineraries": [
+    {
+      "natPark": {
+        "contacts": {
+          "phoneNumbers": [
+            {
+              "phoneNumber": "9252288860",
+              "description": "",
+              "extension": "",
+              "type": "Voice"
+            }
+          ],
+          "emailAddresses": [
+            {
+              "description": "",
+              "emailAddress": "jomu_general_info@nps.gov"
+            }
+          ]
+        },
+        "states": "CA",
+        "longitude": "-122.1326097",
+        "activities": [
+          {
+            "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+            "name": "Guided Tours"
+          },
+          {
+            "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+            "name": "Hiking"
+          },
+          {
+            "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+            "name": "Junior Ranger Program"
+          },
+          {
+            "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+            "name": "Museum Exhibits"
+          },
+          {
+            "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+            "name": "Park Film"
+          },
+          {
+            "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+            "name": "Self-Guided Tours - Walking"
+          },
+          {
+            "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+            "name": "Wildlife Watching"
+          }
+        ],
+        "entranceFees": [
+          {
+            "cost": "0.0000",
+            "description": "The John Muir National Historic Site and Mount Wanda are free to visit.",
+            "title": "John Muir National Historic Site"
+          }
+        ],
+        "directionsInfo": "Please visit our main website for specific directions to our park. You may call the John Muir Visitor Center for additional information.",
+        "entrancePasses": [
+          {
+            "cost": "0.0000",
+            "description": "Passes are not require and are not sold at this location.",
+            "title": "John Muir National Historic Site"
+          }
+        ],
+        "directionsUrl": "http://www.nps.gov/jomu/planyourvisit/directions.htm",
+        "url": "https://www.nps.gov/jomu/index.htm",
+        "weatherInfo": "The Mediterranean climate of Martinez features hot, dry summers with lower temperatures near 60º F and upper temperatures near 100º F. The heat gives way to cool, rainy winters with lows near 45º F and highs near 75º F. Fall and spring can bring rain and temperatures from 55-80º F.\n\nMarch to April: wet/dry, 60-80º F\nMay to September: very dry, 60-100º+ F\nOctober to November: dry/wet, 55-80º F\nDecember to February: wet, 45-75º F",
+        "name": "John Muir",
+        "operatingHours": [
+          {
+            "exceptions": [],
+            "description": "The main park site and visitor center hours of operation.",
+            "standardHours": {
+              "wednesday": "10:00AM - 5:00PM",
+              "monday": "10:00AM - 5:00PM",
+              "thursday": "10:00AM - 5:00PM",
+              "sunday": "10:00AM - 5:00PM",
+              "tuesday": "10:00AM - 5:00PM",
+              "friday": "10:00AM - 5:00PM",
+              "saturday": "10:00AM - 5:00PM"
+            },
+            "name": "John Muir National Historic Site"
+          }
+        ],
+        "topics": [
+          {
+            "id": "69693007-2DF2-4EDE-BB3B-A25EBA72BDF5",
+            "name": "Architecture and Building"
+          },
+          {
+            "id": "12EA2B56-17EC-410A-A10D-BFBA87A0669B",
+            "name": "Explorers and Expeditions"
+          },
+          {
+            "id": "2B428F59-9148-40C1-B38E-130589F2540E",
+            "name": "Immigration"
+          },
+          {
+            "id": "F8C2FE93-DEB3-4B12-9A87-913E3E6B448D",
+            "name": "Natural Sounds"
+          },
+          {
+            "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+            "name": "Scenic Views"
+          },
+          {
+            "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+            "name": "Trails"
+          },
+          {
+            "id": "BA12B386-49EA-46B0-9121-FCACACC47538",
+            "name": "Watersheds"
+          }
+        ],
+        "latLong": "lat:37.9828422, long:-122.1326097",
+        "description": "John Muir played many roles in his life, all of which helped him succeed in his role as an advocate for Nature. As America’s most famous naturalist and conservationist, Muir fought to protect the wild places he loved, places we can still visit today. Muir’s writings convinced the U.S. government to protect Yosemite, Sequoia, Grand Canyon and Mt. Rainier as national parks.",
+        "images": [
+          {
+            "credit": "NPS Photo",
+            "altText": "John Muir Home at the John Muir National Historic Site",
+            "title": "John Muir Home at the John Muir National Historic Site",
+            "caption": "John Muir Home at the John Muir National Historic Site",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C79DF6A-1DD8-B71B-0B64749528CB4952.jpg"
+          }
+        ],
+        "designation": "National Historic Site",
+        "parkCode": "jomu",
+        "addresses": [
+          {
+            "postalCode": "94553",
+            "city": "Martinez",
+            "stateCode": "CA",
+            "line1": "4202 Alhambra Ave",
+            "type": "Mailing",
+            "line3": "",
+            "line2": ""
+          },
+          {
+            "postalCode": "94553",
+            "city": "Martinez",
+            "stateCode": "CA",
+            "line1": "4202 Alhambra Ave",
+            "type": "Physical",
+            "line3": "",
+            "line2": ""
+          }
+        ],
+        "id": "F339067B-A588-4BF3-9D90-1C1BA1249203",
+        "fullName": "John Muir National Historic Site",
+        "latitude": "37.9828422"
+      },
+      "attraction": {
+        "id": 5,
+        "name": "Cabazon Dinosaurs",
+        "state": "CA",
+        "city": "Cabazon",
+        "description": "In the middle of nowhere, California, stand the Cabazon Dinosaurs. There are two dinosaurs, and they are glorious — not to mention highly photographed by tourists on their way to vacation in Palm Springs. These dinosaurs are also known for their appearance in Pee Wee’s Big Adventure. The long-necked dinosaur also houses stairs and a kitschy toy shop inside its body.",
+        "ameneties": {
+          "souvenirs": true,
+          "restrooms": false
+        }
+      },
+      "eatery": {
+        "businessName": "Hudson's Hamburgers",
+        "description": "Burgers and fries. That's the all-American meal. And you can't get it at Hudson's, because it doesn't serve fries. But you can get a burger -- top it with hot mustard and spicy ketchup, if you know what's good for you -- with a side of a few different pies, if you want. There's a lunch counter that fits about 20, and it's packed every day at lunch. Squeeze yourself into a seat at the counter and have a double cheeseburger, a slice of chocolate pie, and a fountain drink. You won't miss the fries. Besides, you can get fries anywhere, so their absence will force you to focus on the deliciousness of everything else on your plate.",
+        "state": "ID",
+        "city": "Coeur d'Alene",
+        "id": 14,
+        "ameneties": {
+          "wheelchairAccessible": false,
+          "petFriendly": false,
+          "wifi": false,
+          "diaperFacility": true,
+          "playground": false,
+          "restrooms": true
+        }
+      },
+      "id": 1
+    }
+  ]
 }
