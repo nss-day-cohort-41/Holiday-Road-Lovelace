@@ -59,12 +59,19 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
             if(document.getElementById("map-container").classList.contains("hidden")){
                 document.getElementById('map-container').classList.toggle('hidden');
                 }
-            showParkChoice()
-            weather(targetNationalPark)
-        }
-            
-        }
+          
+            weather(targetNationalPark)           
+                }          
+            }
           )
+    
+let itinerary = {
+    "natPark": "",
+    "attraction": "",
+    "eatery": ""
+}
+
+let toDatabase = ""
 const showParkChoice = () => {
     // Iterate the collection of park objects
     // for (const currentparkObject of nationalParkCollection.data) {
@@ -77,10 +84,18 @@ const showParkChoice = () => {
         // Put the park HTML representation inside the <article> element
         parkArticleElement.innerHTML = parkHTML
     let natParkButtonListener = document.querySelector(".natPark__details__button")
-
-
-    natParkButtonListener.addEventListener("click", clickEvent => {
+        natParkButtonListener.addEventListener("click", clickEvent => {
                 showParkDetails()
+        }
+        )
+    let saveButtonListener = document.querySelector(".save")
+        saveButtonListener.addEventListener("click", clickEvent => {
+            itinerary.natPark = targetNationalPark;
+            itinerary.attraction = targetAttraction;
+            itinerary.eatery = targetEatery;
+            
+            toDatabase = JSON.stringify(itinerary)
+            saveItinerary(toDatabase)
         }
     )
 }
@@ -90,7 +105,22 @@ const showParkChoice = () => {
 
 const showParkDetails = () => {
     let windowDetails = `${targetNationalPark.fullName}
-     ${targetNationalPark.description}`
+     ${targetNationalPark.description}
+     Weather: ${targetNationalPark.weatherInfo}
+     Located in or near ${targetNationalPark.addresses[1].city}, ${targetNationalPark.addresses[1].stateCode}
+     Hours of operation : 
+     Monday     ${targetNationalPark.operatingHours[0].standardHours.monday}
+     Tuesday    ${targetNationalPark.operatingHours[0].standardHours.tuesday}
+     Wednesday  ${targetNationalPark.operatingHours[0].standardHours.wednesday}
+     Thursday   ${targetNationalPark.operatingHours[0].standardHours.thursday}
+     Friday     ${targetNationalPark.operatingHours[0].standardHours.friday}
+     Saturday   ${targetNationalPark.operatingHours[0].standardHours.saturday}
+     Sunday     ${targetNationalPark.operatingHours[0].standardHours.sunday}
+     ${targetNationalPark.operatingHours[0].description}
+     ${targetNationalPark.entranceFees[0].description}
+
+
+     `
 
     window.alert(windowDetails)
 }
