@@ -20,7 +20,7 @@ const clearEateryPreviewList = () => contentEateryTarget.innerHTML = ""
 const eateryDropdown = document.querySelector("#eatery-dropdown")
 
 eateryDropdown.addEventListener("change", changeEateryEvent => {
-
+   
             userEateryChoice = parseInt(changeEateryEvent.target.value)
 
             clearEateryPreviewList()
