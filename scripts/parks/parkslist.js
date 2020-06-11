@@ -89,7 +89,10 @@ const showParkChoice = () => {
         }
         )
     let saveButtonListener = document.querySelector(".save")
+      
         saveButtonListener.addEventListener("click", clickEvent => {
+              let tripName = prompt("Trip Name:");
+              itinerary.name = tripName;
             itinerary.natPark = targetNationalPark;
             itinerary.attraction = targetAttraction;
             itinerary.eatery = targetEatery;
