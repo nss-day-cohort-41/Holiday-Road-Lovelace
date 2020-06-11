@@ -51,7 +51,6 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
 
         // const parkToPreview = nationalParkCollection.find(park => park.parkCode === "userNationalParkChoice")
        for (const parkToDisplay of nationalParkCollection.data)
-        
         if ( userNationalParkChoice === parkToDisplay.parkCode ) {
             targetNationalPark = parkToDisplay
             directions(parkToDisplay);
@@ -60,19 +59,12 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
             if(document.getElementById("map-container").classList.contains("hidden")){
                 document.getElementById('map-container').classList.toggle('hidden');
                 }
-               
-            directions(parkToDisplay);
-          
-            
             showParkChoice()
             weather(targetNationalPark)
-            
         }
             
         }
           )
-    
-
 const showParkChoice = () => {
     // Iterate the collection of park objects
     // for (const currentparkObject of nationalParkCollection.data) {
