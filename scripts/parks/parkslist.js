@@ -46,16 +46,16 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
 //     // Get the value of the option chosen by the user
     userNationalParkChoice = clickEvent.target.value
     clearParkPreview()
-   
+    document.getElementById('map-container').innerHTML = '<div id="map" class="map-class " style="cursor: default; height:300px; width: 400px;"></div><div class="saved-itinerary " id="saved-itinerary">'
     clearWeatherList()
 
         // const parkToPreview = nationalParkCollection.find(park => park.parkCode === "userNationalParkChoice")
        for (const parkToDisplay of nationalParkCollection.data)
-        
         if ( userNationalParkChoice === parkToDisplay.parkCode ) {
             targetNationalPark = parkToDisplay
             directions(parkToDisplay);
                         showParkChoice()
+        //document.getElementById('map-container').innerHTML = '<div id="map" class="map-class " style="cursor: default; height:300px; width: 400px;"></div>' 
             if(document.getElementById("map-container").classList.contains("hidden")){
                 document.getElementById('map-container').classList.toggle('hidden');
                 }
