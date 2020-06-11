@@ -3,12 +3,14 @@ let forecast = []
 
 // Function to filter array of weather objects
 const fiveDayForecast = (weatherApi) => {
+
   // Iterating through passed-in array of weather objects and filtering every 8th object to narrow down 5 day forecast and grabbing specific data points from each object
-forecast = []
+  // Clears forecast array at start of function
+  forecast = []
 
   for (let i = 0; i < weatherApi.list.length; i+= 8) {
 
-    const desc = `<div class="weather-card"><div class="weather-date">${weatherApi.list[i].dt_txt}</div><div class=""weather-icon><img src="http://openweathermap.org/img/wn/${weatherApi.list[i].weather[0].icon}@2x.png"></div><div class="weather-description">${weatherApi.list[i].weather[0].description}</div><div class="weather-max">Max: ${weatherApi.list[i].main.temp_max}</div><div class="weather-min">Min: ${weatherApi.list[i].main.temp_min}</div></div>`
+    const desc = `<div class="weather-card"><div class="weather-date"><h2>${weatherApi.list[i].dt_txt}</h2></div><div class=""weather-icon><img src="http://openweathermap.org/img/wn/${weatherApi.list[i].weather[0].icon}@2x.png"></div><div class="weather-description">${weatherApi.list[i].weather[0].description}</div><div class="weather-max"><h3>High: ${weatherApi.list[i].main.temp_max}&deg;</h3></div><div class="weather-min"><h3>Low: ${weatherApi.list[i].main.temp_min}&deg;</h3></div></div>`
 
     forecast.push(desc)
   }
