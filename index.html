@@ -26,10 +26,10 @@
                     <li></li>
                     <li></li>
                 </ul>
-            </nav>       
+            </nav>
         </header>
         <div class="banner">
-            <!-- <div> -->
+            <div class="banner__left">
                 <h2>Start Your Adventure Here</h2>
         
                 <section class="userParameters">
@@ -89,21 +89,23 @@
                     </select>
 
                 </section>
-            <!-- </div> -->
-            <!-- <div> -->
-                <!-- <h2>Pick some amenities that you're looking for</h2> -->
-                <!-- < -->
-            <!-- </div> -->
+            </div>
+                <aside class="savedItinerary">
+                    <h2>Saved Itinerary</h2>
+                    <ul class="savedItinerary__list">
+
+                    </ul>
+                </aside>
         </div>
         <section class="dropdown-and-preview">
             <div class="dropdown-box">
                 <select class="national__Park__Dropdown dropdown" id="national-park-dropdown">
                    
                 </select>
-                <select class="dropdown" id="bizarre-dropdown">
+                <select class="dropdown" id="bizarre-dropdown" disabled>
                     <!-- option -->
                 </select>
-                <select class="dropdown" id="eatery-dropdown">
+                <select class="dropdown" id="eatery-dropdown" disabled>
                     <!-- option  -->
                 </select>
                 
@@ -119,7 +121,7 @@
             </div>
         </section>
         <div class="save__button">
-            <button type="button" class="save">Save my trip</button>
+            <button type="button" id="save" class="save" disabled>Save my trip</button>
         </div>
         <section class="weather-and-map-itinerary">
             <div class="weather-map-container">

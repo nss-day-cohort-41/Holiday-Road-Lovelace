@@ -29,6 +29,7 @@ stateDropdown.addEventListener("change", clickEvent => {
         // Put the park HTML representation inside the <article> element
         parkArticleElement.innerHTML += parkHTML
     }
+    document.getElementById("bizarre-dropdown").removeAttribute("disabled")
 })
 }
 )
@@ -66,6 +67,7 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
           )
     
 let itinerary = {
+    "name": "",
     "natPark": "",
     "attraction": "",
     "eatery": ""
@@ -91,12 +93,15 @@ const showParkChoice = () => {
     let saveButtonListener = document.querySelector(".save")
       
         saveButtonListener.addEventListener("click", clickEvent => {
-              let tripName = prompt("Trip Name:");
-              itinerary.name = tripName;
+              
+            itinerary.name = prompt("Trip Name:");;
             itinerary.natPark = targetNationalPark;
             itinerary.attraction = targetAttraction;
             itinerary.eatery = targetEatery;
             
+            let trip = asideCreater(itinerary)
+            document.querySelector(".savedItinerary__list").innerHTML += trip
+
             toDatabase = JSON.stringify(itinerary)
             saveItinerary(toDatabase)
         }
@@ -128,3 +133,9 @@ const showParkDetails = () => {
     window.alert(windowDetails)
 }
 
+const asideCreater = (object) => {
+
+    return `
+    <li><button type="button" class="tripButton" value="${object.name}">${object.name}</button></li>
+    `
+}

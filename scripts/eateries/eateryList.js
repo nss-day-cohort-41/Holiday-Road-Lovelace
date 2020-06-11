@@ -41,6 +41,8 @@ eateryDropdown.addEventListener("change", changeEateryEvent => {
                         })
                     }
                 }
+
+                document.getElementById("save").removeAttribute("disabled")
             }
             )
 
