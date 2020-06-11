@@ -26,21 +26,35 @@ const eateryDropdown = document.querySelector("#eatery-dropdown")
 
 eateryDropdown.addEventListener("change", changeEateryEvent => {
 
-    userEateryChoice = parseInt(changeEateryEvent.target.value)
-    
-    clearEateryPreviewList()
-    
-    for (const eateryObject of eateryCollection) {
+            userEateryChoice = parseInt(changeEateryEvent.target.value)
 
-        if (userEateryChoice === eateryObject.id) {
-            targetEatery = eateryObject
+            clearEateryPreviewList()
 
-            let eateryPreviewHTML = eateryPreviewConverter(targetEatery)
+            for (const eateryObject of eateryCollection) {
+
+                if (userEateryChoice === eateryObject.id) {
+                    targetEatery = eateryObject
+
+                    let eateryPreviewHTML = eateryPreviewConverter(targetEatery)
 
 
-            contentEateryTarget.innerHTML += eateryPreviewHTML
+                    contentEateryTarget.innerHTML += eateryPreviewHTML
+                    let eateryButtonListener = document.querySelector(".eatery__details__button")
 
+                    eateryButtonListener.addEventListener("click", clickEvent => {
+                            showEateryDetails()
+                        })
+                    }
+                }
+            }
+            )
+
+
+        const showEateryDetails = () => {
+            let eateryWindowDetails = `${targetEatery.businessName}
+     Description: ${targetEatery.description}
+     Wi-Fi? ${targetEatery.ameneties.wifi}
+     Restrooms? ${targetEatery.ameneties.restrooms}`
+
+            window.alert(eateryWindowDetails)
         }
-    }
-}
-)
