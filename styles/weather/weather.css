@@ -1,10 +1,26 @@
 .weather-container {
   display: flex;
+  justify-content: space-evenly;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .weather-card {
   margin: 1em;
-  border: 1px solid white;
+  padding: 1em;
   background-color: cornsilk;
+  text-align: center;
+  border-radius: 5%;
+  box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2), 3px 6px 20px 0 rgba(0, 0, 0, 0.4);
+  max-width: 200px;
+  max-height: 350px;
+}
 
+.weather-description {
+  text-transform: capitalize;
+}
+
+.weather-date {
+  word-wrap: break-word;
+  letter-spacing: 1.5px;
 }
