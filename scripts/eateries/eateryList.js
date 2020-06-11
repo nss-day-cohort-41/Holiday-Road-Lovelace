@@ -42,7 +42,11 @@ eateryDropdown.addEventListener("change", changeEateryEvent => {
                     }
                 }
 
-                document.getElementById("save").removeAttribute("disabled")
+                
+                document.getElementById("tripName").classList = ""
+                document.getElementById("tripName").addEventListener("input", (e) => {
+                    document.getElementById("save").removeAttribute("disabled")
+                })
             }
             )
 

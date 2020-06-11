@@ -60,7 +60,7 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
             if(document.getElementById("map-container").classList.contains("hidden")){
                 document.getElementById('map-container').classList.toggle('hidden');
                 }
-          
+            directions(parkToDisplay);
             weather(targetNationalPark)           
                 }          
             }
@@ -90,24 +90,37 @@ const showParkChoice = () => {
                 showParkDetails()
         }
         )
+    }
+
     let saveButtonListener = document.querySelector(".save")
       
         saveButtonListener.addEventListener("click", clickEvent => {
-              
-            itinerary.name = prompt("Trip Name:");;
+            
+            let tripName = document.getElementById("tripName")
+
+            
+            itinerary.name = tripName.value;
             itinerary.natPark = targetNationalPark;
             itinerary.attraction = targetAttraction;
             itinerary.eatery = targetEatery;
-            
+
             let trip = asideCreater(itinerary)
             document.querySelector(".savedItinerary__list").innerHTML += trip
 
             toDatabase = JSON.stringify(itinerary)
-            saveItinerary(toDatabase)
+            saveItinerary(toDatabase).then(() => {
+                return
+            })
+            tripName.value = ""
+            itinerary = {
+                "name": "",
+                "natPark": "",
+                "attraction": "",
+                "eatery": ""
+            }
         }
     )
-}
-
+    
 
 // This is the park details page generator
 
