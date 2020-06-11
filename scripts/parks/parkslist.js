@@ -29,6 +29,7 @@ stateDropdown.addEventListener("change", clickEvent => {
         // Put the park HTML representation inside the <article> element
         parkArticleElement.innerHTML += parkHTML
     }
+    document.getElementById("bizarre-dropdown").removeAttribute("disabled")
 })
 }
 )
@@ -59,13 +60,14 @@ nationalParkDropdown.addEventListener("change", clickEvent => {
             if(document.getElementById("map-container").classList.contains("hidden")){
                 document.getElementById('map-container').classList.toggle('hidden');
                 }
-          
+            directions(parkToDisplay);
             weather(targetNationalPark)           
                 }          
             }
           )
     
 let itinerary = {
+    "name": "",
     "natPark": "",
     "attraction": "",
     "eatery": ""
@@ -88,21 +90,37 @@ const showParkChoice = () => {
                 showParkDetails()
         }
         )
+    }
+
     let saveButtonListener = document.querySelector(".save")
       
         saveButtonListener.addEventListener("click", clickEvent => {
-              let tripName = prompt("Trip Name:");
-              itinerary.name = tripName;
+            
+            let tripName = document.getElementById("tripName")
+
+            
+            itinerary.name = tripName.value;
             itinerary.natPark = targetNationalPark;
             itinerary.attraction = targetAttraction;
             itinerary.eatery = targetEatery;
-            
+
+            let trip = asideCreater(itinerary)
+            document.querySelector(".savedItinerary__list").innerHTML += trip
+
             toDatabase = JSON.stringify(itinerary)
-            saveItinerary(toDatabase)
+            saveItinerary(toDatabase).then(() => {
+                return
+            })
+            tripName.value = ""
+            itinerary = {
+                "name": "",
+                "natPark": "",
+                "attraction": "",
+                "eatery": ""
+            }
         }
     )
-}
-
+    
 
 // This is the park details page generator
 
@@ -128,3 +146,9 @@ const showParkDetails = () => {
     window.alert(windowDetails)
 }
 
+const asideCreater = (object) => {
+
+    return `
+    <li><button type="button" class="tripButton" value="${object.name}">${object.name}</button></li>
+    `
+}
