@@ -48,17 +48,41 @@ main {
 }
 
 .banner {
-    width: 25%;
+    /* width: 25%; */
     font-family: 'Limelight', cursive;
     font-size: 1.2vw;
     text-align: center;
     padding: .5%;
-    background-color:cornsilk;
+    /* background-color:cornsilk; */
     border-radius: 5%;
     margin: 2%;
- 
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
 }
 
 .hidden {
     display: none;
+}
+
+.savedItinerary {
+    width: 25%;
+    font-family: 'Limelight', cursive;
+    font-size: 1.4vw;
+    text-align: center;
+    background-color:cornsilk;
+    border-radius: 5%;
+    margin: 2%;
+    padding: 3%;
+}
+
+ul {
+    list-style: none;
+}
+
+.banner__left {
+    background-color:cornsilk;
+    border-radius: 5%;
+    margin: 2%;
+    padding: 3%;
 }
