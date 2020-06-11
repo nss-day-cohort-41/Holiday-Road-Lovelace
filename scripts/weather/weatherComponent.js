@@ -10,6 +10,7 @@ const fiveDayForecast = (weatherApi) => {
 
   for (let i = 0; i < weatherApi.list.length; i+= 8) {
 
+    // Converts api weather date string to day of week literal
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const d = new Date(`${weatherApi.list[i].dt_txt}`);
     const dayName = days[d.getDay()];
