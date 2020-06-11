@@ -85,9 +85,19 @@ const showParkChoice = () => {
 
         // Put the park HTML representation inside the <article> element
         parkArticleElement.innerHTML = parkHTML
-    let natParkButtonListener = document.querySelector(".natPark__details__button")
-        natParkButtonListener.addEventListener("click", clickEvent => {
+    let natParkButtonEventListener = document.querySelector(".natPark__details__button")
+        natParkButtonEventListener.addEventListener("click", clickEvent => {
                 showParkDetails()
+        }
+        )
+    let natParkButtonHoursListener = document.querySelector(".natPark__hours__button")
+        natParkButtonHoursListener.addEventListener("click", clickEvent => {
+                showParkHours()
+        }
+        )
+    let natParkButtonEventsListener = document.querySelector(".natPark__events__button")
+        natParkButtonEventsListener.addEventListener("click", clickEvent => {
+                showParkEvents()
         }
         )
     }
@@ -128,7 +138,12 @@ const showParkDetails = () => {
     let windowDetails = `${targetNationalPark.fullName}
      ${targetNationalPark.description}
      Weather: ${targetNationalPark.weatherInfo}
-     Located in or near ${targetNationalPark.addresses[1].city}, ${targetNationalPark.addresses[1].stateCode}
+     Located in or near ${targetNationalPark.addresses[1].city}, ${targetNationalPark.addresses[1].stateCode}`
+
+    window.alert(windowDetails)
+}
+const showParkHours = () => {
+    let windowDetails = `${targetNationalPark.fullName}
      Hours of operation : 
      Monday     ${targetNationalPark.operatingHours[0].standardHours.monday}
      Tuesday    ${targetNationalPark.operatingHours[0].standardHours.tuesday}
@@ -137,13 +152,28 @@ const showParkDetails = () => {
      Friday     ${targetNationalPark.operatingHours[0].standardHours.friday}
      Saturday   ${targetNationalPark.operatingHours[0].standardHours.saturday}
      Sunday     ${targetNationalPark.operatingHours[0].standardHours.sunday}
+     
      ${targetNationalPark.operatingHours[0].description}
+     
      ${targetNationalPark.entranceFees[0].description}
-
-
      `
 
     window.alert(windowDetails)
+}
+const showParkEvents = () => {
+    getParkEventData().then(() => {
+    let windowDetails = `${targetNationalPark.fullName}
+    Upcoming Events
+     ${userParkEvents.data[0].location}
+     ${userParkEvents.data[0].description}
+    
+    From ${userParkEvents.data[0].times[0].timestart} to ${userParkEvents.data[0].times[0].timeend}
+    
+    `
+
+    window.alert(windowDetails)
+        }
+    )
 }
 
 const asideCreater = (object) => {

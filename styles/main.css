@@ -48,17 +48,12 @@ main {
 }
 
 .banner {
-    /* width: 25%; */
     font-family: 'Limelight', cursive;
     font-size: 1.2vw;
     text-align: center;
-    padding: .5%;
-    /* background-color:cornsilk; */
     border-radius: 5%;
-    margin: 2%;
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 .hidden {
@@ -85,4 +80,8 @@ ul {
     border-radius: 5%;
     margin: 2%;
     padding: 3%;
+}
+
+h2 {
+    margin-top: -2vw;
 }
