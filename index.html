@@ -9,7 +9,6 @@
     <script src="http://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
     <script src="js/leaflet-providers.js"></script>
     <title>Holiday Run</title>
-    <title>Holiday Run</title>
     <link rel="stylesheet" href="styles/eateryDropdown.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- <link rel="stylesheet" href="styles/startpage.css"> -->
@@ -30,10 +29,11 @@
             </nav>       
         </header>
         <div class="banner">
-            <h2>Start Your Adventure Here</h2>
+            <!-- <div> -->
+                <h2>Start Your Adventure Here</h2>
         
-            <section class="userParameters">
-                <select class="stateChoice">
+                <section class="userParameters">
+                    <select class="stateChoice">
                     <option>Choose a state</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -86,10 +86,14 @@
                     <option value="WV">West Virginia</option>
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>	             
-                </select>
+                    </select>
 
-
-            </section>
+                </section>
+            <!-- </div> -->
+            <!-- <div> -->
+                <!-- <h2>Pick some amenities that you're looking for</h2> -->
+                <!-- < -->
+            <!-- </div> -->
         </div>
         <section class="dropdown-and-preview">
             <div class="dropdown-box">
@@ -115,7 +119,7 @@
             </div>
         </section>
         <div class="save__button">
-            <button type="button" disabled>Save my trip</button>
+            <button type="button" class="save">Save my trip</button>
         </div>
         <section class="weather-and-map-itinerary">
             <div class="weather-map-container">
@@ -123,8 +127,8 @@
 
                 </div>
                 <div class="map-container hidden" id="map-container">
-                    <div id="map" class="map " style="cursor: default; height:300px; width: 400px;"></div>
-                    <div class="saved-itinerary " id="saved-itinerary">
+                    
+                    
             </div>
                 </div>
                 
@@ -149,13 +153,12 @@
     <script src="scripts/parks/parks.js"></script> 
     <!-- Directions Component  -->
 <script src="scripts/directions/itinerary.js"></script>
-    <script src="./scripts/directions/directionFetch.js"></script>
     <script src="./scripts/directions/DirectionProvider.js"></script>
     <!-- Weather Component -->
     <script src="scripts/weather/WeatherProvider.js"></script>
     <script src="scripts/weather/weatherComponent.js"></script>
     <script src="scripts/weather/weatherList.js"></script>
-
+    <script src="scripts/jsonHandler.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 

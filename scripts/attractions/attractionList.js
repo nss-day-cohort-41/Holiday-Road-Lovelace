@@ -39,8 +39,22 @@ attractionDropdown.addEventListener("change", changeAttractionEvent => {
 
 
             contentAttractionTarget.innerHTML += attractionPreviewHTML
+            let attractionButtonListener = document.querySelector(".attraction__details__button")
 
+            attractionButtonListener.addEventListener("click", clickEvent => {
+                showAttractionDetails()
+            })
         }
     }
 }
 )
+
+
+const showAttractionDetails = () => {
+    let attractionWindowDetails = `${targetAttraction.name}
+Description: ${targetAttraction.description}
+Souvenirs? ${targetAttraction.ameneties.souvenirs}
+Restrooms? ${targetAttraction.ameneties.restrooms}`
+
+    window.alert(attractionWindowDetails)
+}
