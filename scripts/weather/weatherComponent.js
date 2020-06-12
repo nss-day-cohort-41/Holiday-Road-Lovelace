@@ -8,7 +8,7 @@ const fiveDayForecast = (weatherApi) => {
   // Clears forecast array at start of function
   forecast = []
 
-  for (let i = 0; i < weatherApi.list.length; i+= 8) {
+  for (let i = 8; i < weatherApi.list.length; i+= 8) {
 
     // Converts api weather date string to day of week literal
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];

@@ -58,7 +58,6 @@ main {
     margin: 2%;
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 .hidden {
