@@ -230,20 +230,53 @@ const makeParkEvent = () => {
 const sortByUserInput = () => {
     userInputChoiceParksBuilder = []
     let userInputRV = document.getElementById("RV_Camping").checked;
-    if ( userInputRV !== true) {
-        userInputChoiceParks = nationalParkCollection
+    let userInputCamping = document.getElementById("Camping").checked;
+    let userInputDriving = document.getElementById("Scenic_Driving").checked;
+    if ( userInputRV !== true && userInputCamping !== true && userInputDriving !== true) {
+        userInputChoiceParks = nationalParkCollection.data
         return userInputChoiceParks
     }
-    else if (userInputRV === true) {
+    else if (userInputCamping === true) {
         for (park of nationalParkCollection.data) {
             for (activities of park.activities) {
-                if (activities.name == "RV Camping")  {
+                if (activities.name === "Camping")  {
                     userInputChoiceParksBuilder.push(park)
                 }  
             }
             
         }
-    }userInputChoiceParks = userInputChoiceParksBuilder
+    }
+    else if (userInputRV === true) {
+        for (park of nationalParkCollection.data) {
+            for (activities of park.activities) {
+                if (activities.name === "Camping")  {
+                    continue
+                }
+                else if (activities.name === "RV Camping")  {
+                    userInputChoiceParksBuilder.push(park)
+                }  
+            }
+            
+        }
+    }
+    else if (userInputDriving === true) {
+        for (park of nationalParkCollection.data) {
+            for (activities of park.activities) {
+                if (activities.name === "Camping")  {
+                    continue
+                }
+                else if (activities.name === "RV Camping")  {
+                    continue
+                }
+                else if (activities.name === "Scenic Driving")  {
+                    userInputChoiceParksBuilder.push(park)
+                }  
+            }
+            
+        }
+    }
+    
+    userInputChoiceParks = userInputChoiceParksBuilder
             return userInputChoiceParks
 
 }

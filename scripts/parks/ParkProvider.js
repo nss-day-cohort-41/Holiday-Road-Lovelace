@@ -2,7 +2,7 @@ let nationalParkCollection = []
 let userParkEvents = []
 
 const getParkData = () => {
-    return fetch(`https://developer.nps.gov/api/v1/parks?stateCode=${userStateChoice}&limit=4&api_key=${API.npsKey}`)
+    return fetch(`https://developer.nps.gov/api/v1/parks?stateCode=${userStateChoice}&api_key=${API.npsKey}`)
             .then(
                 (httpResponse) => {
                     return httpResponse.json()
