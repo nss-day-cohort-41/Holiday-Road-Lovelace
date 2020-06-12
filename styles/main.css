@@ -19,13 +19,18 @@
     flex-direction: column;
     background-color: blanchedalmond;
 }
+.saved-itinerary::-webkit-scrollbar {
+    display: none;
+  }
 .map-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    background-color: white;
-    border: black solid 1px;
+    padding-bottom: 2em;
+    background-color: rgba(255, 248, 220, 0.7814);
+    border: cornsilk solid 15px;
+    padding-top: 2em;
 
 }
 
@@ -54,7 +59,7 @@ main {
     text-align: center;
     border-radius: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .hidden {
@@ -81,8 +86,53 @@ ul {
     border-radius: 5%;
     margin: 2%;
     padding: 3%;
+    
 }
-
-h2 {
-    margin-top: -2vw;
+.dropdown-and-preview {
+    justify-content: center;
 }
+.card {
+    border: black solid 1px;
+    box-shadow: black 0px 0px 4px;
+    border-radius: 5%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 25vw;
+    font-size: x-small;
+}
+.card p{
+    margin-top: -1em;
+}
+.card h1{
+    margin-top: -.4em;
+}
+.card-pic {
+    max-height: 150px;
+    max-width: 150px;
+    width: auto;
+    height: auto;
+    border-radius: 5%;
+}
+.savedItinerary__list {
+    height: 150px;
+    overflow: scroll;
+}
+.savedItinerary__list::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+      margin: -.4em;
+  }
+  .map-class {
+      border: black solid 10px;
+      border-radius: 5%;
+      margin: 1vw;
+  }
+  .saved-itinerary{
+    border: black solid 10px;
+    border-radius: 5%;
+    margin:1vw;
+  }
