@@ -6,10 +6,14 @@ const parkPreviewConverter = (parkObject) => {
 
     const parkHTMLRepresentation = `
         <article class="national-park-card">
-                <img class="park__Photo" src="${parkObject.images[0].url}"
+                <img class="park__Photo" id="park-photo" src="${parkObject.images[0].url}"
                     alt="${parkObject.images[0].altText}"/>
                 <section class="park"><strong>${parkObject.fullName}</strong></section>
+                <div>
                 <button type="button" class="natPark__details__button">Details</button>
+                <button type="button" class="natPark__hours__button">Hours</button>
+                <button type="button" class="natPark__events__button">Events</button>
+                </div>
         </article>`
 
     return parkHTMLRepresentation
