@@ -87,20 +87,21 @@ const showParkChoice = () => {
         parkArticleElement.innerHTML = parkHTML
     let natParkButtonEventListener = document.querySelector(".natPark__details__button")
         natParkButtonEventListener.addEventListener("click", clickEvent => {
-                showParkDetails()
+                showParkDetailsBIG()
         }
         )
-    let natParkButtonHoursListener = document.querySelector(".natPark__hours__button")
-        natParkButtonHoursListener.addEventListener("click", clickEvent => {
-                showParkHours()
-        }
-        )
-    let natParkButtonEventsListener = document.querySelector(".natPark__events__button")
-        natParkButtonEventsListener.addEventListener("click", clickEvent => {
-                showParkEvents()
-        }
-        )
+    // let natParkButtonHoursListener = document.querySelector(".natPark__hours__button")
+    //     natParkButtonHoursListener.addEventListener("click", clickEvent => {
+    //             showParkHours()
+    //     }
+    //     )
+    // let natParkButtonEventsListener = document.querySelector(".natPark__events__button")
+    //     natParkButtonEventsListener.addEventListener("click", clickEvent => {
+    //             showParkEvents()
+    //     }
+    //     )
     }
+// Save itinerary button code 
 
     let saveButtonListener = document.querySelector(".save")
       
@@ -132,7 +133,7 @@ const showParkChoice = () => {
     )
     
 
-// This is the park details page generator
+// This is the park details window alert page generator
 
 const showParkDetails = () => {
     let windowDetails = `${targetNationalPark.fullName}
@@ -184,6 +185,10 @@ const asideCreater = (object) => {
     <li><button type="button" class="tripButton" value="${object.name}">${object.name}</button></li>
     `
 }
+
+// This is for the window.alert event window 
+
+
 let windowDetails = ``
 let windowBuilder = ``
 
@@ -191,7 +196,6 @@ const makeParkEvent = () => {
     windowBuilder = ``
     for (let i=0; i < 2; i++) {
         if (userParkEvents.data[i] == null) {
-            // return windowBuilder
         }
         
         else if (userParkEvents.data[i].isfree === "true") {
@@ -209,18 +213,6 @@ const makeParkEvent = () => {
 
             `
         }
-
-        // windowData = `${userParkEvents.data[i].date}
-        // ${userParkEvents.data[i].location}
-        // ${userParkEvents.data[i].description}
-        
-        // From ${userParkEvents.data[i].times[0].timestart} to ${userParkEvents.data[i].times[0].timeend}
-        
-        // `
-        // windowBuilder += windowData
-        
-      
-
     }
       let windowFinal = `${targetNationalPark.fullName}
     Upcoming Events
@@ -229,3 +221,9 @@ const makeParkEvent = () => {
         windowDetails = windowFinal
        return windowDetails
 }
+// This is for the big popup event window 
+
+const showParkDetailsBIG = () => {
+    getParkEventData().then(() => {
+    const parkBigPopup = parkBigPopupHTMLConverter(targetNationalPark, userParkEvents)
+})}

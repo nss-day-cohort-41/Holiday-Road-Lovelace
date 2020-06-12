@@ -24,12 +24,9 @@ const getParkEventData = () => {
         )
             .then((arrayOfEvents) => {
                 userParkEvents = arrayOfEvents
-            console.log(userParkEvents)}
+            }
         )
         
 }
-        /*
-Responsible for generating a list of park HTML
-representations, and putting in the browser
-*/
+
 
