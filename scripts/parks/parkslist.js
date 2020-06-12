@@ -229,6 +229,7 @@ const makeParkEvent = () => {
 
 const sortByUserInput = () => {
     userInputChoiceParksBuilder = []
+    userInputChoiceParks = []
     let userInputRV = document.getElementById("RV_Camping").checked;
     let userInputCamping = document.getElementById("Camping").checked;
     let userInputDriving = document.getElementById("Scenic_Driving").checked;
