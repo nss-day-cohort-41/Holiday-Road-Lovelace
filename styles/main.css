@@ -2,6 +2,7 @@
 
 @import "/styles/startpage.css";
 
+
 .itinerary {
     border:black solid 1px;
     box-shadow: black 0px 0px 4px;
@@ -53,14 +54,10 @@ main {
 }
 
 .banner {
-    /* width: 25%; */
     font-family: 'Limelight', cursive;
     font-size: 1.2vw;
     text-align: center;
-    padding: .5%;
-    /* background-color:cornsilk; */
     border-radius: 5%;
-    margin: 2%;
     display: flex;
     justify-content: center;
 }
