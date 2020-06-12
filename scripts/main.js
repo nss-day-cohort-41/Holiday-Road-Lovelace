@@ -13,10 +13,10 @@ getAttractionData().then(
 )
 getEateryData().then(
   () => {
-     eateryDropdownList(eateryCollection)
-    
+     eateryDropdownList(eateryCollection) 
   }  
  )
+ 
 
 
 // // Invoke the getWeatherData function to fetch data from openWeatherAPI

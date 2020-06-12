@@ -1,10 +1,8 @@
 
 const eateryDropdownConverter = (eateryObject) => {
       const eateryDropdownHTML = `
-      <option value=${eateryObject.id}>${eateryObject.businessName}</option>
-      
-        
-      `
+      <option value=${eateryObject.id}>${eateryObject.businessName}</option>`
+
       return eateryDropdownHTML
     }
     
@@ -20,3 +18,5 @@ const eateryDropdownConverter = (eateryObject) => {
     
       return eateryHTMLRepresentation
     }
+ 
+ 
