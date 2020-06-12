@@ -4,7 +4,7 @@ representations, and putting in the browser
 */
 
 // This places parks into the dropdown menu filtered from the selected state
-
+let userInputChoiceParks = []
 let userStateChoice = ""
 
 const clearParkPulldown = () => nationalStateTarget.innerHTML = "<option>Choose Your Park</option>"
@@ -17,8 +17,9 @@ stateDropdown.addEventListener("change", clickEvent => {
     userStateChoice = clickEvent.target.value
     clearParkPulldown()
     getParkData().then(() => {
+        sortByUserInput(nationalParkCollection)
     // Iterate the collection of park objects
-    for (const currentparkObject of nationalParkCollection.data) {
+    for (const currentparkObject of userInputChoiceParks) {
 
         // Convert the current park to its HTML representation
         const parkHTML = parkDropdownConverter(currentparkObject)
@@ -197,7 +198,7 @@ const makeParkEvent = () => {
     windowBuilder = ``
     for (let i=0; i < 2; i++) {
         if (userParkEvents.data[i] == null) {
-            // return windowBuilder
+
         }
         
         else if (userParkEvents.data[i].isfree === "true") {
@@ -216,16 +217,6 @@ const makeParkEvent = () => {
             `
         }
 
-        // windowData = `${userParkEvents.data[i].date}
-        // ${userParkEvents.data[i].location}
-        // ${userParkEvents.data[i].description}
-        
-        // From ${userParkEvents.data[i].times[0].timestart} to ${userParkEvents.data[i].times[0].timeend}
-        
-        // `
-        // windowBuilder += windowData
-        
-      
 
     }
       let windowFinal = `${targetNationalPark.fullName}
@@ -234,4 +225,58 @@ const makeParkEvent = () => {
     `
         windowDetails = windowFinal
        return windowDetails
+}
+
+const sortByUserInput = () => {
+    userInputChoiceParksBuilder = []
+    let userInputRV = document.getElementById("RV_Camping").checked;
+    let userInputCamping = document.getElementById("Camping").checked;
+    let userInputDriving = document.getElementById("Scenic_Driving").checked;
+    if ( userInputRV !== true && userInputCamping !== true && userInputDriving !== true) {
+        userInputChoiceParks = nationalParkCollection.data
+        return userInputChoiceParks
+    }
+    else if (userInputCamping === true) {
+        for (park of nationalParkCollection.data) {
+            for (activities of park.activities) {
+                if (activities.name === "Camping")  {
+                    userInputChoiceParksBuilder.push(park)
+                }  
+            }
+            
+        }
+    }
+    else if (userInputRV === true) {
+        for (park of nationalParkCollection.data) {
+            for (activities of park.activities) {
+                if (activities.name === "Camping")  {
+                    continue
+                }
+                else if (activities.name === "RV Camping")  {
+                    userInputChoiceParksBuilder.push(park)
+                }  
+            }
+            
+        }
+    }
+    else if (userInputDriving === true) {
+        for (park of nationalParkCollection.data) {
+            for (activities of park.activities) {
+                if (activities.name === "Camping")  {
+                    continue
+                }
+                else if (activities.name === "RV Camping")  {
+                    continue
+                }
+                else if (activities.name === "Scenic Driving")  {
+                    userInputChoiceParksBuilder.push(park)
+                }  
+            }
+            
+        }
+    }
+    
+    userInputChoiceParks = userInputChoiceParksBuilder
+            return userInputChoiceParks
+
 }
