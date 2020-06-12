@@ -162,16 +162,18 @@ const showParkHours = () => {
 }
 const showParkEvents = () => {
     getParkEventData().then(() => {
-    let windowDetails = `${targetNationalPark.fullName}
-    Upcoming Events
-     ${userParkEvents.data[0].location}
-     ${userParkEvents.data[0].description}
+        if (userParkEvents.data[0] == null ) {
+            let windowDetails = `${targetNationalPark.fullName}
+            Sorry, there are no upcoming events scheduled at this time.`
+            window.alert(windowDetails)
+        }
+        else { makeParkEvent()
     
-    From ${userParkEvents.data[0].times[0].timestart} to ${userParkEvents.data[0].times[0].timeend}
-    
-    `
+            window.alert(windowDetails)
 
-    window.alert(windowDetails)
+        }
+
+    
         }
     )
 }
@@ -181,4 +183,49 @@ const asideCreater = (object) => {
     return `
     <li><button type="button" class="tripButton" value="${object.name}">${object.name}</button></li>
     `
+}
+let windowDetails = ``
+let windowBuilder = ``
+
+const makeParkEvent = () => {
+    windowBuilder = ``
+    for (let i=0; i < 2; i++) {
+        if (userParkEvents.data[i] == null) {
+            // return windowBuilder
+        }
+        
+        else if (userParkEvents.data[i].isfree === "true") {
+            windowBuilder += `${userParkEvents.data[i].date}   From ${userParkEvents.data[i].times[0].timestart} to ${userParkEvents.data[i].times[0].timeend}  This event is free
+            ${userParkEvents.data[i].location}
+            ${userParkEvents.data[i].description}
+            
+            `
+        }
+
+        else if (userParkEvents.data[i].isfree === "false") {
+            windowBuilder += `${userParkEvents.data[i].date}   From ${userParkEvents.data[i].times[0].timestart} to ${userParkEvents.data[i].times[0].timeend}  This event costs $${feeinfo}
+            ${userParkEvents.data[i].location}
+            ${userParkEvents.data[i].description}
+
+            `
+        }
+
+        // windowData = `${userParkEvents.data[i].date}
+        // ${userParkEvents.data[i].location}
+        // ${userParkEvents.data[i].description}
+        
+        // From ${userParkEvents.data[i].times[0].timestart} to ${userParkEvents.data[i].times[0].timeend}
+        
+        // `
+        // windowBuilder += windowData
+        
+      
+
+    }
+      let windowFinal = `${targetNationalPark.fullName}
+    Upcoming Events
+    ${windowBuilder}
+    `
+        windowDetails = windowFinal
+       return windowDetails
 }
