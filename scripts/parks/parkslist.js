@@ -147,8 +147,14 @@ const showParkDetails = () => {
 }
 
 const asideCreater = (object) => {
-
+     let img = document.getElementById('park-photo').src
     return `
-    <li><button type="button" class="tripButton" value="${object.name}">${object.name}</button></li>
+    <div class="card">
+    <div class="card-img-top">
+        <img src=${img} class="card-pic" alt="beautiful picture" >
+    </div>
+    <h1>${object.name}</h1>
+    <p>${object.natPark.name}</p>
+</div>
     `
 }
