@@ -52,7 +52,9 @@ attractionDropdown.addEventListener("change", changeAttractionEvent => {
 
 
 const showAttractionDetails = () => {
-    let attractionWindowDetails = `${targetAttraction.name}
+    let attractionWindowDetails = `
+${targetAttraction.name}
+Location: ${targetAttraction.city}, ${targetAttraction.state}
 Description: ${targetAttraction.description}
 Souvenirs? ${targetAttraction.ameneties.souvenirs}
 Restrooms? ${targetAttraction.ameneties.restrooms}`

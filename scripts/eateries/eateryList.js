@@ -52,7 +52,9 @@ eateryDropdown.addEventListener("change", changeEateryEvent => {
 
 
         const showEateryDetails = () => {
-            let eateryWindowDetails = `${targetEatery.businessName}
+            let eateryWindowDetails = `
+     ${targetEatery.businessName}
+     Location: ${targetEatery.city}, ${targetEatery.state}
      Description: ${targetEatery.description}
      Wi-Fi? ${targetEatery.ameneties.wifi}
      Restrooms? ${targetEatery.ameneties.restrooms}`
